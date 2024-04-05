@@ -1,0 +1,24 @@
+.toast {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-13)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-helvetica);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+
+  padding: 22px 26px;
+  border-radius: 6px;
+  position: fixed;
+  top: 10px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.success {
+  background: var(--unnamed-color-66bb6a) 0% 0% no-repeat padding-box;
+  right: 10px;
+  box-shadow: 0px 10px 15px #4CAF505C;
+}
+
+.error {
+  background: var(--unnamed-color-ef7da0) 0% 0% no-repeat padding-box;
+  left: 10px;
+  box-shadow: 0px 10px 15px #EF7DA05C;
+}

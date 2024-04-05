@@ -1,1 +1,138 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/assets/fonts/Helvetica/HelveticaLight/HelveticaLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/assets/fonts/Helvetica/HelveticaRegular/HelveticaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/assets/fonts/Helvetica/HelveticaBold/HelveticaBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+:root {
+
+  /* Colors: */
+  --unnamed-color-f44682: #F44682;
+  --unnamed-color-eff0f4: #EFF0F4;
+  --unnamed-color-f4f5f8: #F4F5F8;
+  --unnamed-color-66bb6a: #66BB6A;
+  --unnamed-color-ccd2e2: #CCD2E2;
+  --unnamed-color-ef7da0: #EF7DA0;
+  --unnamed-color-a4a4b5: #A4A4B5;
+  --unnamed-color-f3f6f9: #F3F6F9;
+  --unnamed-color-3f4254: #3F4254;
+  --unnamed-color-2e8ff0: #2E8FF0;
+  --unnamed-color-ebedf3: #EBEDF3;
+  --unnamed-color-ffffff: #FFFFFF;
+  --unnamed-color-eef0f8: #EEF0F8;
+
+  /* Font/text values */
+  --unnamed-font-family-helvetica: Helvetica;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-300: 300;
+  --unnamed-font-weight-bold: bold;
+  --unnamed-font-weight-normal: normal;
+  --unnamed-font-size-13: 13px;
+  --unnamed-font-size-14: 14px;
+  --unnamed-font-size-16: 16px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-16: 16px;
+  --unnamed-line-spacing-17: 17px;
+  --unnamed-line-spacing-19: 19px;
+  --unnamed-text-transform-uppercase: uppercase;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-13);
+  line-height: var(--unnamed-line-spacing-16);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-a4a4b5);
+  text-transform: var(--unnamed-text-transform-uppercase);
+}
+.unnamed-character-style-2 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-13);
+  line-height: var(--unnamed-line-spacing-16);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+}
+.unnamed-character-style-3 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-13);
+  line-height: var(--unnamed-line-spacing-16);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ef7da0);
+}
+.unnamed-character-style-4 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-300);
+  font-size: var(--unnamed-font-size-13);
+  line-height: var(--unnamed-line-spacing-16);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-3f4254);
+}
+.unnamed-character-style-5 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-13);
+  line-height: var(--unnamed-line-spacing-16);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-3f4254);
+}
+.unnamed-character-style-6 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-bold);
+  font-size: var(--unnamed-font-size-16);
+  line-height: var(--unnamed-line-spacing-19);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-3f4254);
+}
+.unnamed-character-style-7 {
+  font-family: var(--unnamed-font-family-helvetica);
+  font-style: var(--unnamed-font-style-normal);
+  font-weight: var(--unnamed-font-weight-normal);
+  font-size: var(--unnamed-font-size-14);
+  line-height: var(--unnamed-line-spacing-17);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+}
+
+body {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-13)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-helvetica);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-3f4254);
+  margin: 46px;
+  background: var(--unnamed-color-eef0f8) 0% 0% no-repeat padding-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}

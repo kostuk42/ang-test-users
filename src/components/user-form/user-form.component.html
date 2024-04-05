@@ -1,0 +1,90 @@
+  <div class="user-form">
+    <div class="title">
+      {{ modalConfig.title}}
+    </div>
+    <button (click)="closeForm(null)" class="user-form__close-btn">
+      <img ngSrc="../../assets/icons/close-icon.svg" alt="Close" width="24" height="24">
+    </button>
+    <form [formGroup]="userForm" novalidate>
+      <div class="user-form__field">
+        <label for="username" class="user-form__label">Username*</label>
+        <input id="username" type="text" formControlName="username" class="user-form__input">
+        <div *ngIf="submitted && userForm.controls['username'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['username'].errors?.['required']">Username is required.</span>
+          <span *ngIf="userForm.controls['username'].errors?.['uniqueUsername']">Username is already taken.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field">
+        <label for="first_name" class="user-form__label">First Name*</label>
+        <input id="first_name" type="text" formControlName="first_name" class="user-form__input">
+        <div *ngIf="submitted && userForm.controls['first_name'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['first_name'].errors?.['required']">First name is required.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field">
+        <label for="last_name" class="user-form__label">Last Name*</label>
+        <input id="last_name" type="text" formControlName="last_name" class="user-form__input">
+        <div *ngIf="submitted && userForm.controls['last_name'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['last_name'].errors?.['required']">Last name is required.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field" >
+        <label for="email" class="user-form__label">Email*</label>
+        <input id="email" type="email" formControlName="email" class="user-form__input email">
+        <div *ngIf="submitted && userForm.controls['email'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['email'].errors?.['required']">Email is required.</span>
+          <span *ngIf="userForm.controls['email'].errors?.['email']">Please enter a valid email.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field">
+        <label for="user_type" class="user-form__label">User Type*</label>
+        <select id="user_type" formControlName="user_type" class="user-form__select">
+          <option value="" disabled>Select user type</option>
+          <option *ngFor="let type of userTypes" [value]="type">{{ type }}</option>
+        </select>
+        <div *ngIf="submitted && userForm.controls['user_type'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['user_type'].errors?.['required']">User type is required.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field">
+        <label for="password" class="user-form__label">Password*</label>
+        <input id="password" type="password" formControlName="password" class="user-form__input">
+        <div *ngIf="submitted && userForm.controls['password'].errors" class="user-form__error">
+          <span *ngIf="userForm.controls['password'].errors?.['required']">Password is required.</span>
+          <span *ngIf="userForm.controls['password'].errors?.['passwordStrength']">Password must be at least 8 characters long and include at least one number and one letter.</span>
+        </div>
+      </div>
+
+      <div class="user-form__field">
+        <label for="repeat-password" class="user-form__label">Repeat password*</label>
+        <input id="repeat-password" type="password" formControlName="repeatPassword" class="user-form__input">
+        <div *ngIf="submitted && userForm.errors?.['mismatch']" class="user-form__error">
+          Passwords must match.
+        </div>
+      </div>
+
+      <div class="user-form__buttons"
+           [ngClass]="modalConfig.isCreateMode ? 'create': 'view'">
+        <app-button [textButton]="'Delete'"
+                    [backgroundColor] = "'var(--unnamed-color-f44682)'"
+                    (click)="delete()" *ngIf="!modalConfig.isCreateMode">
+        </app-button>
+        <app-button [textButton]="'Create'"
+                    [backgroundColor] = "'var(--unnamed-color-2e8ff0)'"
+                    (click)="create()"
+                    *ngIf="modalConfig.isCreateMode">
+        </app-button>
+        <app-button [textButton]="'Save'"
+                    [backgroundColor] = "'var(--unnamed-color-2e8ff0)'"
+                    (click)="update()"
+                    *ngIf="!modalConfig.isCreateMode">
+        </app-button>
+      </div>
+    </form>
+  </div>
+
